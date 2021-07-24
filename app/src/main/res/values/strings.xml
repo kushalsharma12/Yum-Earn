@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Yum Earn</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Yum Earn is an android app which will help people to earn through the waste food.
+Using our app user can post waste food that he want to sell and one of our picker boy will pick that waste food from the user’s provided address. Then we will compose that waste food into fertilizers and sell them into the market. This process will take time till than the money will be added in user’s account and in future as the fertilizer process completes, user will be able to redeem that money. At each post, there will be an status shown that how far their waste in the process to turn in money and as that complete, money will be added to user’s account and he can redeem it.</string>
+</resources>

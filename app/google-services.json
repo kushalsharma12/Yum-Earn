@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "807996866246",
+    "project_id": "yum-earn",
+    "storage_bucket": "yum-earn.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:807996866246:android:8b14688f19e213ec21a1c7",
+        "android_client_info": {
+          "package_name": "com.kushalsharma.yumearn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "807996866246-th2qjqa40lqr8aiaeuitob903dqtf906.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMAywSY6scoQYaBVa3cmJ080rfLnfCFg0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "807996866246-th2qjqa40lqr8aiaeuitob903dqtf906.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

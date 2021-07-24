@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_orders">
+
+    <fragment
+        android:id="@+id/navigation_orders"
+        android:name="com.kushalsharma.yumearn.ui.Orders.OrdersFragment"
+        android:label="fragment_orders"
+        tools:layout="@layout/fragment_orders" />
+    <fragment
+        android:id="@+id/navigation_addPost"
+        android:name="com.kushalsharma.yumearn.ui.AddPost.AddPostFragment"
+        android:label="fragment_add_post"
+        tools:layout="@layout/fragment_add_post" >
+        <action
+            android:id="@+id/action_navigation_addPost_to_confirmOrderFragment"
+            app:destination="@id/confirmOrderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_aboutUs"
+        android:name="com.kushalsharma.yumearn.ui.AboutUs.AboutUsFragment"
+        android:label="fragment_about_us"
+        tools:layout="@layout/fragment_about_us" />
+    <fragment
+        android:id="@+id/navigation_doAndDont"
+        android:name="com.kushalsharma.yumearn.ui.DosAndDont.DosAndDontFragment"
+        android:label="fragment_dos_and_dont"
+        tools:layout="@layout/fragment_dos_and_dont" />
+    <dialog
+        android:id="@+id/confirmOrderFragment"
+        android:name="com.kushalsharma.yumearn.ui.ConfirmOrder.ConfirmOrderFragment"
+        android:label="fragment_confirm_order"
+        tools:layout="@layout/fragment_confirm_order">
+
+        <argument
+            android:name="currentPost"
+            app:argType="com.kushalsharma.yumearn.models.Post" />
+        <action
+            android:id="@+id/action_confirmOrderFragment_to_navigation_orders"
+            app:destination="@id/navigation_orders" />
+        <action
+            android:id="@+id/action_confirmOrderFragment_to_navigation_addPost"
+            app:destination="@id/navigation_addPost" />
+    </dialog>
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.kushalsharma.yumearn.ui.Profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

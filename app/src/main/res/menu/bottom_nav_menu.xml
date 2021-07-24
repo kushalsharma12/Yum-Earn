@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_orders"
+        android:icon="@drawable/common_full_open_on_phone"
+        android:title="Orders" />
+
+
+    <item
+        android:id="@+id/navigation_doAndDont"
+        android:icon="@drawable/common_full_open_on_phone"
+        android:title="Do's and Don't" />
+
+    <item
+        android:id="@+id/navigation_addPost"
+        android:icon="@drawable/common_full_open_on_phone"
+        android:title="Add Post" />
+
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/common_full_open_on_phone"
+        android:title="Profile" />
+
+    <item
+        android:id="@+id/navigation_aboutUs"
+        android:icon="@drawable/common_full_open_on_phone"
+        android:title="About us" />
+
+</menu>

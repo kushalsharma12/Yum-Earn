@@ -3,29 +3,30 @@
 
     <item
         android:id="@+id/navigation_orders"
-        android:icon="@drawable/common_full_open_on_phone"
+        android:icon="@drawable/ic_home"
         android:title="Orders" />
 
 
     <item
         android:id="@+id/navigation_doAndDont"
-        android:icon="@drawable/common_full_open_on_phone"
+        android:icon="@drawable/ic_resource_do"
         android:title="Do's and Don't" />
 
     <item
         android:id="@+id/navigation_addPost"
-        android:icon="@drawable/common_full_open_on_phone"
+        android:icon="@drawable/add_nav"
         android:title="Add Post" />
 
 
-    <item
-        android:id="@+id/navigation_profile"
-        android:icon="@drawable/common_full_open_on_phone"
-        android:title="Profile" />
 
     <item
         android:id="@+id/navigation_aboutUs"
-        android:icon="@drawable/common_full_open_on_phone"
+        android:icon="@drawable/ic_i"
         android:title="About us" />
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_user"
+        android:title="Profile" />
+
 
 </menu>

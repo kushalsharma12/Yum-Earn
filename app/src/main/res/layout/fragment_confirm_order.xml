@@ -11,87 +11,164 @@
         android:id="@+id/address_ET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Address"
+        android:hint="Your Address"
+        android:background="@null"
         android:textColor="@color/black"
         android:textSize="24sp"
+        android:layout_margin="16dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/currentLoc_Btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/ic_baseline_add_location_alt_24"
-        app:layout_constraintEnd_toStartOf="@+id/postButton_confirm"
-        app:layout_constraintHorizontal_bias="0.421"
-        app:layout_constraintStart_toEndOf="@+id/cancelButton_confirm"
-        app:layout_constraintTop_toBottomOf="@+id/quantity_confirm" />
-
-    <TextView
-        android:id="@+id/title_confirm"
+       <com.google.android.material.card.MaterialCardView
+        android:id="@+id/infoCard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:text="Title"
-        android:textColor="@color/black"
-        android:textSize="20sp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@color/lightBlack"
+        android:backgroundTint="@color/lightBlack"
+        android:elevation="8dp"
+        app:cardBackgroundColor="@color/lightBlack"
+        app:cardCornerRadius="32dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/address_ET" />
+        app:layout_constraintTop_toBottomOf="@+id/address_ET">
 
-    <TextView
-        android:id="@+id/description_confirm"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:gravity="center"
-        android:text="Description"
-        android:textSize="16sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_confirm" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp">
 
-    <TextView
-        android:id="@+id/quantity_confirm"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:gravity="center"
-        android:text="Quantity"
-        android:textSize="16sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/description_confirm" />
+            <TextView
+               android:id="@+id/title_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:fontFamily="@font/poppins"
+                android:text="Title"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                        app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                 />
 
-    <Button
+            <TextView
+                android:id="@+id/description_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="12dp"
+                android:background="@null"
+                android:fontFamily="@font/poppins"
+                android:textColor="#8E8B8B"
+                android:textSize="14sp"
+                android:text="Decription"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_confirm"
+                />
+            <TextView
+                android:id="@+id/quantity_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="12dp"
+                android:background="@null"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/description_confirm"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/postButton_confirm"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginRight="32dp"
-        android:gravity="center"
+        app:cornerRadius="16dp"
         android:text="Post"
         android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="24sp"
+        android:backgroundTint="@color/redLight"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppins"
+        android:textStyle="bold"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quantity_confirm" />
+        app:layout_constraintTop_toBottomOf="@+id/infoCard" />
 
     <TextView
         android:id="@+id/cancelButton_confirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="44dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="30dp"
         android:gravity="center"
         android:text="Cancel"
         android:textAllCaps="false"
-        android:textColor="#E11010"
+        android:textColor="@color/darkgrey"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quantity_confirm" />
+        app:layout_constraintTop_toBottomOf="@+id/infoCard" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--<TextView-->
+<!--android:id="@+id/title_confirm"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:layout_marginTop="8dp"-->
+<!--android:gravity="center"-->
+<!--android:text="Title"-->
+<!--android:textColor="@color/black"-->
+<!--android:textSize="20sp"-->
+<!--app:layout_constraintLeft_toLeftOf="parent"-->
+<!--app:layout_constraintRight_toRightOf="parent"-->
+<!--app:layout_constraintTop_toBottomOf="@+id/address_ET" />-->
+
+<!--<TextView-->
+<!--android:id="@+id/description_confirm"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:layout_marginTop="4dp"-->
+<!--android:gravity="center"-->
+<!--android:text="Description"-->
+<!--android:textSize="16sp"-->
+<!--app:layout_constraintLeft_toLeftOf="parent"-->
+<!--app:layout_constraintRight_toRightOf="parent"-->
+<!--app:layout_constraintTop_toBottomOf="@+id/title_confirm" />-->
+
+<!--<TextView-->
+<!--android:id="@+id/quantity_confirm"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:layout_marginTop="4dp"-->
+<!--android:gravity="center"-->
+<!--android:text="Quantity"-->
+<!--android:textSize="16sp"-->
+<!--app:layout_constraintLeft_toLeftOf="parent"-->
+<!--app:layout_constraintRight_toRightOf="parent"-->
+<!--app:layout_constraintTop_toBottomOf="@+id/description_confirm" />-->
+<!--&lt;!&ndash;&ndash;&gt;-->

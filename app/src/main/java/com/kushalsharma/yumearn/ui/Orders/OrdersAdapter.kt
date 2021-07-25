@@ -6,6 +6,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CenterCrop
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.kushalsharma.yumearn.R
@@ -38,6 +41,10 @@ class OrdersAdapter(options: FirestoreRecyclerOptions<Post>) : FirestoreRecycler
         holder.oDescription.text = model.description
         holder.oQty.text = model.quantity
         holder.createdAt.text = Utils.getTimeAgo(model.createdAt)
+                Glide.with(holder.oImg.context).load(model.imageUrl)
+            .transform(CenterCrop(), RoundedCorners(40))
+            .into(holder.oImg)
+
 
     }
 }

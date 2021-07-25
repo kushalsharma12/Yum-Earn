@@ -1,9 +1,11 @@
 package com.kushalsharma.yumearn.ui.Orders
 
+import android.app.ActionBar
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.firebase.auth.FirebaseAuth
@@ -17,6 +19,7 @@ import kotlinx.android.synthetic.main.fragment_orders.*
 
 class OrdersFragment : Fragment() {
 
+
     private val db = FirebaseFirestore.getInstance()
     private lateinit var adapter: OrdersAdapter
     private lateinit var auth: FirebaseAuth
@@ -28,6 +31,8 @@ class OrdersFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val root = inflater.inflate(R.layout.fragment_orders, container, false)
+
+        (activity as AppCompatActivity).supportActionBar?.hide()
 
         auth = Firebase.auth
 
@@ -42,18 +47,6 @@ class OrdersFragment : Fragment() {
     }
 
 
-    override fun onStart() {
-        super.onStart()
-
-        adapter.startListening()
-
-    }
-
-
-    override fun onStop() {
-        super.onStop()
-        adapter.stopListening()
-    }
 
     private fun setupRecyclerView() {
 
@@ -62,7 +55,7 @@ class OrdersFragment : Fragment() {
 
 
         val query = db.collection("Posts")
-            .whereEqualTo("userId", currentUser!!.uid)
+//            .whereEqualTo("userId", currentUser!!.uid)
             .orderBy("createdAt").limit(100)
 
 
@@ -81,6 +74,20 @@ class OrdersFragment : Fragment() {
 
 
     }
+
+    override fun onStart() {
+        super.onStart()
+
+        adapter.startListening()
+
+    }
+
+
+    override fun onStop() {
+        super.onStop()
+        adapter.stopListening()
+    }
+
 
 
 }

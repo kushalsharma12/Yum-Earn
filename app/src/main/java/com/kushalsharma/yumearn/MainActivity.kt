@@ -1,5 +1,6 @@
 package com.kushalsharma.yumearn
 
+import android.app.PendingIntent.getActivity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.findNavController
@@ -15,8 +16,10 @@ class MainActivity : AppCompatActivity() {
 
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
+        navView.itemIconTintList = null;
+
         val navController = findNavController(R.id.nav_host_fragment)
-        val appBarConfiguration = AppBarConfiguration(setOf(R.id.navigation_orders,R.id.navigation_doAndDont,R.id.navigation_addPost,R.id.navigation_profile ,R.id.navigation_aboutUs))
+        val appBarConfiguration = AppBarConfiguration(setOf(R.id.navigation_orders,R.id.navigation_doAndDont,R.id.navigation_addPost,R.id.navigation_aboutUs,R.id.navigation_profile))
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 

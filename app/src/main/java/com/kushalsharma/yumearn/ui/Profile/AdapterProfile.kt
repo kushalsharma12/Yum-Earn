@@ -30,6 +30,6 @@ class AdapterProfile(options: FirestoreRecyclerOptions<Earning>) : FirestoreRecy
     }
 
     override fun onBindViewHolder(holder: profileViewHolder, position: Int, model: Earning) {
-        holder.eText.text = model.userMoney
+        holder.eText.text = "Your Earning: "+ model.userMoney
     }
 }

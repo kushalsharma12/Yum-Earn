@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CenterCrop
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -42,7 +44,9 @@ class ProfileFragment : Fragment() {
         user_Email.text = currentUser.email!!.toString()
         phNo.text = currentUser.phoneNumber!!.toString()
         Glide.with(userImg)
-            .load(currentUser.photoUrl).circleCrop().into(userImg)
+            .load(currentUser.photoUrl)
+            .transform(CenterCrop(), RoundedCorners(36))
+            .into(userImg)
 
         setupRecycle()
     }
@@ -81,4 +85,3 @@ class ProfileFragment : Fragment() {
 
 
 }
-//update will be soon

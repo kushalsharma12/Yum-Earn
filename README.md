@@ -1,27 +1,7 @@
 # Yum-Earn
 **Earn from waste food and contribute to society.**
 
-## Screen-Shots
-
 ![1](https://user-images.githubusercontent.com/65327113/126973942-7e6afa7b-8d94-42cb-b917-f73715cbb163.png)  
-
-
-![2](https://user-images.githubusercontent.com/65327113/126973982-bf2741ff-a17f-4218-920f-cd06a671e3d9.png)
-
-
-![3](https://user-images.githubusercontent.com/65327113/126973994-b7f8064c-bc9b-4ee4-8b0f-3e203fe5a4e6.png)
-
-
-![4](https://user-images.githubusercontent.com/65327113/126973999-e94ad0df-f35a-42aa-b510-648a412549db.png)
-
-
-![5](https://user-images.githubusercontent.com/65327113/126974007-61833cc6-f5f7-47d4-8baf-b8149055f06c.png)
-
-
-![6](https://user-images.githubusercontent.com/65327113/126974011-8613334f-d043-4bec-850b-49182a839de1.png)
-
-
-![7](https://user-images.githubusercontent.com/65327113/126974017-55a873fa-564f-4509-b774-2240af5453b4.png)
 
 
 ## Problem we are solving

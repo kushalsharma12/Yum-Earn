@@ -123,6 +123,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="1dp"
                     android:fontFamily="@font/poppins"
+                    android:hint="+91-9669xxxxxx"
                     android:text="+91-9636428652"
                     android:textColor="@color/lightfrey"
                     android:textSize="12sp" />
@@ -181,7 +182,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_redeem"
-        android:layout_width="220dp"
+        android:layout_width="200dp"
         android:layout_marginTop="32dp"
         android:layout_height="64dp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -193,6 +194,7 @@
         android:backgroundTint="@color/redLight"
         android:textSize="16sp"
         android:gravity="center"
+        android:textColor="@color/white"
         android:fontFamily="@font/poppins"
         android:textStyle="bold"/>
 

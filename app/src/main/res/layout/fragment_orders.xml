@@ -18,13 +18,23 @@
             android:id="@+id/title_orerro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
             android:fontFamily="@font/poppins"
-            android:text="Your Posts"
+            android:text="Your Orders"
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/order_profilePic"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="32dp"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,7 +45,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/poppins"
-            android:text="Hey Kushal!"
+            android:text="Hey Pal!"
             android:textColor="@color/lightBlack"
             android:textSize="26sp"
             android:textStyle="bold"
@@ -67,5 +77,55 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/upper" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/order_rv"
+        app:lottie_autoPlay="false"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/tv_below_anim"
+        app:lottie_loop="true"
+        app:lottie_url="https://assets1.lottiefiles.com/packages/lf20_qjkoks0z.json" />
+
+
+    <TextView
+        android:id="@+id/tv_below_anim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="@font/poppins"
+        android:text="Currently, you have no orders to show."
+        android:textColor="@color/darkgrey"
+        android:textSize="16sp"
+        android:layout_marginBottom="4dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/order_btn_add_here"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="200dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/redLight"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:id="@+id/order_btn_add_here"
+        android:text="Add here"
+        android:layout_marginBottom="48dp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,7 +9,12 @@
         android:id="@+id/navigation_orders"
         android:name="com.kushalsharma.yumearn.ui.Orders.OrdersFragment"
         android:label="fragment_orders"
-        tools:layout="@layout/fragment_orders" />
+        tools:layout="@layout/fragment_orders" >
+        <action
+            android:id="@+id/action_navigation_orders_to_navigation_profile"
+            app:destination="@id/navigation_profile"
+            app:enterAnim="@android:anim/fade_in" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_addPost"
         android:name="com.kushalsharma.yumearn.ui.AddPost.AddPostFragment"
@@ -44,6 +49,7 @@
         <action
             android:id="@+id/action_confirmOrderFragment_to_navigation_addPost"
             app:destination="@id/navigation_addPost" />
+
     </dialog>
     <fragment
         android:id="@+id/navigation_profile"

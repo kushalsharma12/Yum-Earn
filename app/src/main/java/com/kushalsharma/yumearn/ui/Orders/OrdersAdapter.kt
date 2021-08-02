@@ -15,7 +15,7 @@ import com.kushalsharma.yumearn.R
 import com.kushalsharma.yumearn.Utils
 import com.kushalsharma.yumearn.models.Post
 
-class OrdersAdapter(options: FirestoreRecyclerOptions<Post>) : FirestoreRecyclerAdapter<Post, OrdersAdapter.orderViewHolder>(
+class OrdersAdapter(options: FirestoreRecyclerOptions<Post>, val listner : iPostAdapter) : FirestoreRecyclerAdapter<Post, OrdersAdapter.orderViewHolder>(
     options
 ) {
     class orderViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -47,4 +47,13 @@ class OrdersAdapter(options: FirestoreRecyclerOptions<Post>) : FirestoreRecycler
 
 
     }
+
+    override fun onDataChanged() {
+        super.onDataChanged()
+        listner.onItemCount(itemCount)
+          }
+
+}
+interface iPostAdapter{
+    fun onItemCount(count : Int)
 }
